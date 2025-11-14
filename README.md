@@ -174,7 +174,20 @@ All messages are delivered in the following **JSON structure**:
   "symbolIsin": "IRO1XYZ1234",
   "timestamp": "2025-11-14T12:00:00.000000",
   "data": {
-
+      "Buy": [
+        {
+          "price": 0,
+          "quantity": 0,
+          "count": 0
+        }
+      ],
+      "Sell": [
+        {
+          "price": 0,
+          "quantity": 0,
+          "count": 0
+        }
+      ]
   }
 }
 ```
@@ -206,7 +219,17 @@ All messages are delivered in the following **JSON structure**:
   "symbolIsin": "IRO1XYZ1234",
   "timestamp": "2025-11-14T12:00:00.000000",
   "data": {
-
+      "date": "string",
+      "time": "string",
+      "trade_count": 0,
+      "total_volume": 0,
+      "total_value": 0,
+      "closing_price": 0,
+      "last_price": 0,
+      "low_price": 0,
+      "high_price": 0,
+      "open_price": 0,
+      "previous_close": 0
   }
 }
 ```
@@ -220,7 +243,14 @@ All messages are delivered in the following **JSON structure**:
   "symbolIsin": "IRO1XYZ1234",
   "timestamp": "2025-11-14T12:00:00.000000",
   "data": {
-
+      "buy_count_individual": 0,
+      "buy_volume_individual": 0,
+      "buy_count_institution": 0,
+      "buy_volume_institution": 0,
+      "sell_count_individual": 0,
+      "sell_volume_individual": 0,
+      "sell_count_institution": 0,
+      "sell_volume_institution": 0
   }
 }
 ```
@@ -234,7 +264,9 @@ All messages are delivered in the following **JSON structure**:
   "symbolIsin": "IRO1XYZ1234",
   "timestamp": "2025-11-14T12:00:00.000000",
   "data": {
-
+      "open_interest": 0,
+      "initial_margin": 0,
+      "required_margin": 0
   }
 }
 ```
@@ -244,11 +276,14 @@ All messages are delivered in the following **JSON structure**:
 
 ```json
 {
-  "channel": "ohlcv-last-1m",
+  "channel": "fund-info",
   "symbolIsin": "IRO1XYZ1234",
   "timestamp": "2025-11-14T12:00:00.000000",
   "data": {
-
+      "nav": 0,
+      "units": 0,
+      "marketCap": 0,
+      "as_of": "2025-11-14T22:10:42.802Z"
   }
 }
 ```
