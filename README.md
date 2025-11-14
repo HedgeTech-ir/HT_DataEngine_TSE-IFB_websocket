@@ -220,7 +220,7 @@ import websockets
 import json
 
 async def subscribe():
-    url = "wss://core.hedgetech.ir/live/data/websocket/symbol/isin?symbol_isins=IRO1XYZ1234&channels=best-limit,order-book"
+    url = "wss://core.hedgetech.ir/data-engine/tse-ifb/live/data/websocket/symbol/isin?channels=order-book&channels=best-limit&symbol_isins=IRT3SATF0001&symbol_isins=IRTKMOFD0001"
     headers = {
         "Authorization": "<your_token>"
     }
