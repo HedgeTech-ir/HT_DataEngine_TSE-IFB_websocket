@@ -164,10 +164,23 @@ All messages are delivered in the following **JSON structure**:
   }
 }
 ```
-
 ---
 
-### 6.2 Example: `ohlcv-last-1m`
+### 6.2 Example: `order-book`
+
+```json
+{
+  "channel": "order-book",
+  "symbolIsin": "IRO1XYZ1234",
+  "timestamp": "2025-11-14T12:00:00.000000",
+  "data": {
+
+  }
+}
+```
+---
+
+### 6.3 Example: `ohlcv-last-1m`
 
 ```json
 {
@@ -183,10 +196,67 @@ All messages are delivered in the following **JSON structure**:
   }
 }
 ```
-
 ---
 
-### 6.3 Other Channels
+### 6.4 Example: `aggregate`
+
+```json
+{
+  "channel": "aggregate",
+  "symbolIsin": "IRO1XYZ1234",
+  "timestamp": "2025-11-14T12:00:00.000000",
+  "data": {
+
+  }
+}
+```
+---
+
+### 6.5 Example: `institutional-vs-individual`
+
+```json
+{
+  "channel": "institutional-vs-individual",
+  "symbolIsin": "IRO1XYZ1234",
+  "timestamp": "2025-11-14T12:00:00.000000",
+  "data": {
+
+  }
+}
+```
+---
+
+### 6.6 Example: `contract-info`
+
+```json
+{
+  "channel": "contract-info",
+  "symbolIsin": "IRO1XYZ1234",
+  "timestamp": "2025-11-14T12:00:00.000000",
+  "data": {
+
+  }
+}
+```
+---
+
+### 6.7 Example: `fund-info`
+
+```json
+{
+  "channel": "ohlcv-last-1m",
+  "symbolIsin": "IRO1XYZ1234",
+  "timestamp": "2025-11-14T12:00:00.000000",
+  "data": {
+
+  }
+}
+```
+---
+
+
+
+### 7. Other Channels
 
 Payload models follow the **Pydantic models** provided (`Aggregate`, `OrderBook`, `InstitutionalVsIndividual`, `ContractInfo`, `FundInfo`) and always adhere to the format:
 
@@ -201,7 +271,7 @@ Payload models follow the **Pydantic models** provided (`Aggregate`, `OrderBook`
 
 ---
 
-## 7. Error Handling
+## 8. Error Handling
 
 | Code | Description |
 |------|-------------|
@@ -210,9 +280,9 @@ Payload models follow the **Pydantic models** provided (`Aggregate`, `OrderBook`
 
 ---
 
-## 8. Examples
+## 9. Examples
 
-### 8.1 Python (WebSocket Client)
+### 9.1 Python (WebSocket Client)
 
 ```python
 import asyncio
@@ -232,7 +302,7 @@ async def subscribe():
 asyncio.run(subscribe())
 ```
 
-### 8.2 Subscription Notes
+### 9.2 Subscription Notes
 
 - Multiple symbols and channels can be subscribed in a **single WebSocket connection**.
 - The server streams messages continuously; handle them asynchronously.
@@ -240,7 +310,7 @@ asyncio.run(subscribe())
 
 ---
 
-## 9. Best Practices
+## 10. Best Practices
 
 - Reconnect with **exponential backoff** in case of disconnects.
 - Validate your JWT **before subscribing**.
