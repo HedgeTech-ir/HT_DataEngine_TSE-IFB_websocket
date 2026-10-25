@@ -6,10 +6,22 @@
 
 ## 1. Overview
 
-This documentation describes the **HT Data Engine WebSocket API** for subscribing to real-time market data for **TSE & IFB** symbols.  
-The API provides multiple channels delivering structured financial data such as order books, aggregate trades, OHLCV, and fund/contract information.  
+📊 This documentation describes the **HT Data Engine WebSocket API** for subscribing to real-time market data for **TSE & IFB** symbols.  
 
-All WebSocket endpoints require **JWT token-based authentication** and support multiple symbols or ISINs in a single connection.
+📊 The API provides multiple channels delivering structured financial data such as order books, aggregate trades, OHLCV, and fund/contract information.  
+
+📊 All WebSocket endpoints require **JWT token-based authentication** and support multiple symbols or ISINs in a single connection.
+
+🔑 Access to this WebSocket API requires subscription. 
+Order now: 
+
+https://store.hedgetech.ir/وب-سرویس-داده-ی-بورس/وب-سوکت-دریافت-داده-های-لحظه-ای-بازار-بورس-و-فرابورس-tse-ifb-live-market-data-web-socket-/prod_11.html 
+
+🆔 https://hedgetech.ir/landing/
+
+🆔 https://www.linkedin.com/company/hedgetech-ir/
+
+📲 Contact us: +989922583432
 
 ---
 
